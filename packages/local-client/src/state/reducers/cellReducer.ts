@@ -3,6 +3,7 @@ import produce from 'immer';
 import { Action } from '../actions';
 import { Cell } from '../cell';
 import { ActionType } from '../action-types';
+
 interface CellsState {
 	loading: boolean;
 	error: string | null;
@@ -21,6 +22,25 @@ const initialState: CellsState = {
 
 const reducer = produce((state: CellsState = initialState, action: Action) => {
 	switch (action.type) {
+		case ActionType.SAVE_CELLS_ERROR:
+			state.error = action.payload;
+			return state;
+		case ActionType.FETCH_CELLS:
+			state.loading = true;
+			state.error = null;
+			return state;
+		case ActionType.FETCH_CELLS_COMPLETE:
+			state.order = action.payload.map(cell => cell.id);
+			state.data = action.payload.reduce((acc, cell) => {
+				acc[cell.id] = cell;
+				return acc;
+			},{} as CellsState['data'])
+
+			return state;
+		case ActionType.FETCH_CELLS_ERROR:
+			state.loading = false;
+			state.error= action.payload;
+			return state;
 		case ActionType.DELETE_CELL:
 			delete state.data[action.payload];
 			state.order = state.order.filter((id) => id !== action.payload);

@@ -1,14 +1,21 @@
 0 silly argv {
-0 silly argv   _: [ 'init' ],
+0 silly argv   _: [ 'add' ],
+0 silly argv   exact: true,
+0 silly argv   E: true,
+0 silly argv   dev: true,
+0 silly argv   D: true,
+0 silly argv   scope: 'jvsbook',
+0 silly argv   globs: [],
 0 silly argv   lernaVersion: '3.22.1',
-0 silly argv   '$0': 'C:\\Users\\801651\\AppData\\Roaming\\npm\\node_modules\\lerna\\cli.js'
+0 silly argv   '$0': 'C:\\Users\\HP\\AppData\\Roaming\\npm\\node_modules\\lerna\\cli.js',
+0 silly argv   pkg: '@esbuild@0.8.26'
 0 silly argv }
 1 notice cli v3.22.1
-2 verbose rootPath C:\react\web\TYPESCRIPT Projects\jbook
-3 verbose init skipping validations
-4 verbose init skipping preparations
-5 info Initializing Git repository
-6 error Error: spawn git ENOENT
-6 error     at notFoundError (C:\Users\801651\AppData\Roaming\npm\node_modules\lerna\node_modules\cross-spawn\lib\enoent.js:6:26)
-6 error     at verifyENOENT (C:\Users\801651\AppData\Roaming\npm\node_modules\lerna\node_modules\cross-spawn\lib\enoent.js:40:16)
-6 error     at ChildProcess.cp.emit (C:\Users\801651\AppData\Roaming\npm\node_modules\lerna\node_modules\cross-spawn\lib\enoent.js:27:25)
+2 verbose rootPath C:\react\jbook
+3 error Error: Invalid package name "@esbuild": name can only contain URL-friendly characters
+3 error     at invalidPackageName (C:\Users\HP\AppData\Roaming\npm\node_modules\lerna\node_modules\npm-package-arg\npa.js:86:15)
+3 error     at Result.setName (C:\Users\HP\AppData\Roaming\npm\node_modules\lerna\node_modules\npm-package-arg\npa.js:121:11)
+3 error     at new Result (C:\Users\HP\AppData\Roaming\npm\node_modules\lerna\node_modules\npm-package-arg\npa.js:111:23)
+3 error     at resolve (C:\Users\HP\AppData\Roaming\npm\node_modules\lerna\node_modules\npm-package-arg\npa.js:58:15)
+3 error     at npa (C:\Users\HP\AppData\Roaming\npm\node_modules\lerna\node_modules\npm-package-arg\npa.js:52:10)
+3 error     at AddCommand.initialize (C:\Users\HP\AppData\Roaming\npm\node_modules\lerna\node_modules\@lerna\add\index.js:39:17)

@@ -59,7 +59,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, initialValue }) => {
 			<button className="button button-format is-primary is-small" onClick={onFormatClick}>Format</button>
 			<MonacoEditor
 				editorDidMount={onEditorDidMount}
-				value={initialValue}
+				value={initialValue || "//call show('VALUE ') to show on output window"}
 				theme='dark'
 				language='javascript'
 				height='100%'
