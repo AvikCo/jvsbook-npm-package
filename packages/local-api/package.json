@@ -1,4 +1,4 @@
- {
+{
   "name": "@jvsbook/local-api",
   "version": "1.0.0",
   "description": "",
@@ -18,11 +18,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@jvsbook/local-client": "^1.0.0",
     "commander": "^7.2.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "http-proxy-middleware": "^1.2.0",
-    "@jvsbook/local-client": "^0.1.0"
+    "http-proxy-middleware": "^1.2.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.10",
