@@ -8,6 +8,14 @@ export const useCumulativeCode = (cellId: string) => {
 		const showFunc = `
 			import _React from 'react';
 			import _ReactDOM from 'react-dom';
+			const rootS = document.querySelector('#root');
+			setTimeout(()=>{
+				if(rootS.innerHTML === ''){
+					rootS.innerHTML = '<div style="color: gray; font-family: cursive;font-size: 16px; opacity: 0.5;">// call show() to print here</div>'
+				}
+			},60);
+			console.log(root)
+			console.log(root.innerHTML)
 				var show = (value) => {
 					const root = document.querySelector('#root');
 					if(typeof value === 'object'){
@@ -25,7 +33,7 @@ export const useCumulativeCode = (cellId: string) => {
 		const cumulativeCode = [];
 		for (let c of orderedCells) {
 			if (c.type === 'code') {
-				if (c.id == cellId) {
+				if (c.id === cellId) {
 					cumulativeCode.push(showFunc);
 				} else {
 					cumulativeCode.push(showFuncNoop);

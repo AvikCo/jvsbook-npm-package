@@ -12,7 +12,7 @@ const CellList: React.FC = () => {
       return data[id];
      })
   })
-  const {fetchCells, saveCells} = useActions();
+  const {fetchCells} = useActions();
 
   useEffect(() => {
     fetchCells();
