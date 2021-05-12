@@ -14,8 +14,6 @@ export const useCumulativeCode = (cellId: string) => {
 					rootS.innerHTML = '<div style="color: gray; font-family: cursive;font-size: 16px; opacity: 0.5;">// call show() to print here</div>'
 				}
 			},60);
-			console.log(root)
-			console.log(root.innerHTML)
 				var show = (value) => {
 					const root = document.querySelector('#root');
 					if(typeof value === 'object'){
