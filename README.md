@@ -35,5 +35,5 @@ To start up and and install jvsbook
   * npx jvsbook serve myCustomNotebook.js //here custom notebook is myCustomNotebook.js
 ## npx install -g jvsbook
   * To globally install jvsbook
-    * if you install globally you can start the app by only "jvsbook serve <OPTIONAL_CONFIGURATION>"
+    * if you install globally you can start the app by only "jvsbook serve <OPTIONAL_CONFIGURATIONS>"
 
