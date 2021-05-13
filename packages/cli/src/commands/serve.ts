@@ -4,6 +4,7 @@ import {serve} from '@jvsbook/local-api';
 
 const isProduction = process.env.NODE_ENV === 'production';
 export const serveCommand = new Command()
+//configuring the CLI to accecpt parameters
 .command('serve [filename]')
 .description('Open a file for editing')
 .option('-p, --port <number>', 'port to run server on', '4005')
