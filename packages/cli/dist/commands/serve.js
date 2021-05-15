@@ -45,6 +45,7 @@ var commander_1 = require("commander");
 var local_api_1 = require("@jvsbook/local-api");
 var isProduction = process.env.NODE_ENV === 'production';
 exports.serveCommand = new commander_1.Command()
+    //configuring the CLI to accecpt parameters
     .command('serve [filename]')
     .description('Open a file for editing')
     .option('-p, --port <number>', 'port to run server on', '4005')

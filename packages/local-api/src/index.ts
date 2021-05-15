@@ -4,9 +4,9 @@ import path from 'path';
 import {createCellsRouter} from './routes/cells';
 
 
-export const serve = (port: number, filename:string, dir: string, useProxy: boolean) =>{
+export const serve = (port: number, filename:string, directory: string, useProxy: boolean) =>{
 const app = express();
-app.use(createCellsRouter(filename, dir));
+app.use(createCellsRouter(filename, directory));
 if(useProxy){
 app.use(createProxyMiddleware({
     target:'http://localhost:3000',

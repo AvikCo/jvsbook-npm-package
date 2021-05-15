@@ -13,7 +13,7 @@ export const useCumulativeCode = (cellId: string) => {
 				if(rootS.innerHTML === ''){
 					rootS.innerHTML = '<div style="color: gray; font-family: cursive;font-size: 16px; opacity: 0.5;">// call show() to print here</div>'
 				}
-			},60);
+			},55);
 				var show = (value) => {
 					const root = document.querySelector('#root');
 					if(typeof value === 'object'){
