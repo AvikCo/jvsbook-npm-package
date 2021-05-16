@@ -21,7 +21,7 @@
    * Immer
    * EsBuild
 # How to use it?
-Prerequisite:
+Prerequisites:
   * Node and NPM needs to be installed in your system
 ## npx jvsbook serve
 To start up and and install jvsbook
